@@ -13,6 +13,9 @@ This repository contains the official website for Peasport, a professional sport
 * Frontend: HTML5, CSS3, and Vanilla JavaScript.
 * Services: Formspree API for email handling and Instagram Graph API for social media synchronization.
 
+## Development Note
+This project was developed using a vibe-coding approach. While the core architecture, logic, and final integration were directed by the developer, significant portions of the implementation were assisted by artificial intelligence to streamline the development process and focus on the overall vision.
+
 ## Configuration
 To ensure security, all sensitive API keys are excluded from version control via the .gitignore file. To run the project locally, a config.js file must be created in the root directory with the following structure:
 
@@ -37,6 +40,9 @@ Käesolev hoidla sisaldab spordipsühholoogia ettevõtte Peasport ametlikku veeb
 ## Tehnoloogiad
 * Kasutajaliides: HTML5, CSS3 ja JavaScript.
 * Teenused: Formspree API vormide haldamiseks ja Instagram Graph API sotsiaalmeedia sünkroniseerimiseks.
+
+## Märkus arendusprotsessi kohta
+Käesolev projekt on valminud vibe-coding meetodil. Kuigi süsteemi arhitektuur, loogika ja lõplik integreerimine on teostatud arendaja poolt, on rakendamisel kasutatud olulisel määral tehisintellekti abi, et tõhustada tööprotsessi ja keskenduda projekti üldisele visioonile.
 
 ## Seadistamine
 Turvakaalutlustel on kõik tundlikud API-võtmed versioonihaldusest .gitignore faili abil välja jäetud. Projekti lokaalseks käivitamiseks tuleb luua juurkataloogi config.js fail järgmise struktuuriga:
