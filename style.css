@@ -777,3 +777,135 @@ html {
     margin-top: 40px;
     margin-bottom: 20px;
 }
+
+/* --- TEENUSED: LINEAARNE SCROLL --- */
+.services-list {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    margin-bottom: 80px;
+}
+
+.service-row {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(15px);
+    padding: 40px;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* Vahetab pildi ja teksti asukohta üle ühe */
+.service-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.service-text {
+    flex: 1;
+    text-align: left;
+}
+
+.service-text h2 {
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.service-text p {
+    color: var(--text-main);
+    line-height: 1.7;
+    font-size: 1.05rem;
+}
+
+.service-img-container {
+    flex: 1;
+}
+
+.service-img-container img {
+    width: 100%;
+    height: 350px; /* Fikseeritud kõrgus, et pildid oleks ühesugused */
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Mobiilivaade: Lükkab asjad alati üksteise alla (pilt peal, tekst all) */
+@media (max-width: 900px) {
+    .service-row, .service-row.reverse {
+        flex-direction: column;
+        gap: 30px;
+        padding: 30px;
+    }
+    .service-img-container img {
+        height: 250px;
+    }
+}
+
+/* --- PRIVAATSUSPOLIITIKA LEHT --- */
+.privacy-section {
+    padding: 20px;
+}
+
+.privacy-container {
+    max-width: 1200px; 
+    margin: 40px auto; 
+    text-align: left; 
+    padding: 60px; 
+    line-height: 1.8; 
+    color: var(--text-main); 
+    backdrop-filter: blur(15px); 
+    background: rgba(255, 255, 255, 0.7); 
+    border-radius: 24px; 
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05); 
+    font-size: 1.05rem;
+}
+
+.privacy-title {
+    text-align: center; 
+    margin-bottom: 40px; 
+    font-size: 3.5rem;
+}
+
+.privacy-heading {
+    color: var(--brand-dark); 
+    margin-top: 40px; 
+    margin-bottom: 15px;
+}
+
+.privacy-text {
+    margin-bottom: 20px;
+}
+
+.privacy-list {
+    margin-left: 20px; 
+    margin-bottom: 20px;
+}
+
+/* Privaatsuspoliitika link jaluses */
+.footer-privacy {
+    margin-top: 15px;
+}
+
+.footer-privacy a {
+    color: var(--text-main); /* Teeb lingi nähtavaks (tumedaks) */
+    text-decoration: underline; 
+    font-size: 0.9rem;
+    transition: 0.3s ease;
+}
+
+.footer-privacy a:hover {
+    color: var(--brand-dark);
+}
+
+/* Gradient text (kui seda pole veel mujal failis) */
+.gradient-text {
+    background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
