@@ -1,0 +1,26 @@
+[
+  {
+    "file": "test1.md",
+    "title": "Minu esimene blogipostitus",
+    "excerpt": "See on lühike sissejuhatav tekst, mis paistab uudistevoos.",
+    "image": "assets/img/dog1.jpg"
+  },
+  {
+    "file": "test2.md",
+    "title": "Toitumine spordis",
+    "excerpt": "Kuidas õigesti toituda enne ja pärast rasket treeningut.",
+    "image": "assets/img/dog2.jpg"
+  },
+    {
+    "file": "test3.md",
+    "title": "Minu esimene blogipostitus",
+    "excerpt": "See on lühike sissejuhatav tekst, mis paistab uudistevoos.",
+    "image": "assets/img/dog3.jpg"
+  },
+  {
+    "file": "test4.md",
+    "title": "Toitumine spordis",
+    "excerpt": "Kuidas õigesti toituda enne ja pärast rasket treeningut.",
+    "image": "assets/img/dog4.jpg"
+  }
+]

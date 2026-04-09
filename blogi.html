@@ -9,7 +9,7 @@
 <body>
     <nav class="navbar">
         <a href="index.html" class="logo-container">
-            <img src="pildid/peasport.png" alt="Peasport logo">
+            <img src="assets/img/peasport.png" alt="Peasport logo">
             <span class="logo-text">Peasport</span>
         </a>
         <div class="nav-right">
@@ -20,24 +20,14 @@
     </nav>
 
     <main class="main-content">
-        <section class="hero" style="min-height: 40vh;">
+        <section id="blog-hero" class="hero" style="min-height: 25vh; padding: 60px 20px 20px;">
             <h1>Peasport <span class="gradient-text">Blogi</span></h1>
             <p>Lood ja nõuanded vaimseks soorituseks.</p>
         </section>
 
-        <section class="blog-content">
-            <div class="glass-container">
-                <article class="blog-post">
-                    <h2>Kuidas tulla toime võistluspingega?</h2>
-                    <p>Siia tuleb sinu esimene blogipostitus. Spordipsühholoogia on oluline...</p>
-                    <a href="#" class="read-more">Loe edasi →</a>
-                </article>
-                <hr style="margin: 40px 0; border: 0; border-top: 1px solid rgba(0,0,0,0.05);">
-                <article class="blog-post">
-                    <h2>Vigastusest taastumise vaimne pool</h2>
-                    <p>Füüsiline taastusravi on vaid osa teekonnast...</p>
-                    <a href="#" class="read-more">Loe edasi →</a>
-                </article>
+        <section class="blog-content" style="padding: 40px 20px;">
+            <div id="blog-container" class="glass-container" style="text-align: center; min-height: 200px;">
+                <p>Laen postitusi...</p>
             </div>
         </section>
     </main>
@@ -46,14 +36,19 @@
         <div class="footer-partners">
             <p>Meie toetajad ja partnerid</p>
             <div class="partner-logos">
-                <img src="pildid/toetaja.png" alt="Hesburger">
-                <img src="pildid/toetaja.png" alt="Hesburger">
-                <img src="pildid/toetaja.png" alt="Hesburger">
-                <img src="pildid/toetaja.png" alt="Hesburger">
+                <img src="assets/img/toetaja.png" alt="Toetaja">
+                <img src="assets/img/toetaja.png" alt="Toetaja">
+                <img src="assets/img/toetaja.png" alt="Toetaja">
+                <img src="assets/img/toetaja.png" alt="Toetaja">
             </div>
         </div>
         <p class="copyright">Lehekülje on koostanud Dagmar Rahula. Sisu on autoriõigusega kaitstud.</p>
     </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    
+    <script src="blog-loader.js"></script>
+    
     <script src="funk.js"></script>
 </body>
 </html>
