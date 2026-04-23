@@ -137,17 +137,34 @@ h1, h2, h3 {
 
 /* 4. HERO SEKTSIOON (Roosa fookusega taust) */
 .hero {
+    position: relative; /* Vajalik uduse tausta paigutamiseks */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Tsentreerib vertikaalselt */
-    align-items: center;     /* Tsentreerib horisontaalselt */
+    justify-content: center;
+    align-items: center;
     text-align: center;
     padding: 40px;
     margin: 0;
     box-sizing: border-box;
-    background: var(--bg-gradient);
+    overflow: hidden; /* Takistab udu üle äärte valgumist */
+}
 
+/* UUS: Udune taustapilt Hero sektsioonile */
+.hero::before {
+    content: '';
+    position: absolute;
+    /* Venitame pildi kergelt üle äärte, et udu ei tekitaks koledaid valgeid servi */
+    top: -30px; 
+    left: -30px; 
+    right: -30px; 
+    bottom: -30px; 
+    background-image: url('assets/img/AI_Image.png'); /* MUUDA SEE OMA PILDI VASTU! */
+    background-size: cover;
+    background-position: center;
+    filter: blur(12px); /* Uduse tugevus - mida suurem number, seda udusam */
+    z-index: -1; /* Lükkab pildi kõige tahapoole */
+    opacity: 0.35; /* Teeb pildi läbipaistvamaks, et tume tekst oleks loetav */
 }
 
 .hero h1 {
@@ -1027,4 +1044,39 @@ html {
 .blog-read-more:hover {
     color: #ec4899; /* Sinu koodis varem kasutatud ilus roosa */
     border-bottom: 2px solid #ec4899;
+}
+
+/* --- TÄIUSTATUD DARK MODE --- */
+body.dark-mode {
+    --bg-gradient: #000000;      /* Täiesti must taust */
+    --text-main: #ffffff;        /* Puhas valge tekst */
+    --brand-dark: #7dd3fc;       /* Heledam sinine pealkirjadele kontrastiks */
+    --glass-bg: rgba(25, 25, 25, 0.85);
+    --glass-border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Kohandame navbar-i ja muid elemente tumedaks */
+body.dark-mode .navbar {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+body.dark-mode .nav-right a:not(.nav-contact-btn) {
+    color: #ffffff;
+}
+
+/* Kui sul on Hero sektsioonis udune pilt, teeme selle tumedamaks */
+body.dark-mode .hero::before {
+    opacity: 0.2;
+    filter: blur(15px) brightness(0.4);
+}
+
+/* Teeme kaardid ja vormid tumedaks */
+body.dark-mode .glass-container, 
+body.dark-mode .team-member-card, 
+body.dark-mode .service-row, 
+body.dark-mode .contact-form,
+body.dark-mode .blog-card,
+body.dark-mode .reach-out-card {
+    background: var(--glass-bg);
+    color: #ffffff;
 }

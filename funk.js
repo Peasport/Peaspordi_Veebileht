@@ -65,5 +65,42 @@ async function initInstagram() {
     }
 }
 
+let kjClicks = 0;
+let clickTimer;
+
+const kjTrigger = document.getElementById('kj-trigger');
+
+if (kjTrigger) {
+    kjTrigger.addEventListener('click', () => {
+        kjClicks++;
+        
+        // Puhastame vana taimeri, kui klikitakse kiiresti uuesti
+        clearTimeout(clickTimer);
+        
+        if (kjClicks === 3) {
+            // Lülitab režiimi sisse või välja (toggle)
+            document.body.classList.toggle('dark-mode');
+            
+            // Salvestame valiku brauseri mällu
+            const isDark = document.body.classList.contains('dark-mode');
+            localStorage.setItem('dark-mode-enabled', isDark);
+            
+            kjClicks = 0; // Nullime loenduri
+        }
+
+        // Kui 1.5 sekundi jooksul uut klikki ei tule, nullime loenduri
+        clickTimer = setTimeout(() => {
+            kjClicks = 0;
+        }, 1500);
+    });
+}
+
+// Kontrollime lehe laadimisel, mis režiim varem oli
+document.addEventListener('DOMContentLoaded', () => {
+    if (localStorage.getItem('dark-mode-enabled') === 'true') {
+        document.body.classList.add('dark-mode');
+    }
+});
+
 // Käivitame funktsiooni, kui leht on laetud
 document.addEventListener('DOMContentLoaded', initInstagram);
