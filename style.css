@@ -388,10 +388,14 @@ h1, h2, h3 {
 
 /* --- KONTAKTEERUMISE SEKTIOSON --- */
 .contact-section {
-    padding: 80px 20px;
-    max-width: 600px; /* Hoiab vormi kitsa ja tsentreerituna */
-    margin: 40px auto;
-    text-align: center;
+    max-width: 1200px !important; /* Muuda see number suuremaks vastavalt soovile */
+    width: 95%;
+    margin: 0 auto;
+}
+
+#cal-booking-container {
+    width: 100% !important;
+    min-height: 700px; /* Tegin veidi kõrgemaks ka, et mahuks paremini ära */
 }
 
 .contact-section h2 {

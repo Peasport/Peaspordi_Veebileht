@@ -102,5 +102,37 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+// --- CAL.COM KALENDRI LAADIMINE ---
+document.addEventListener('DOMContentLoaded', function() {
+    const calContainer = document.getElementById('cal-booking-container');
+
+    if (calContainer) {
+        // Laeb Cal.com skripti
+        (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.cal = C.cal || function () { let cal = C.cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; typeof namespace === "string" ? (cal.ns[namespace] = cal.ns[namespace] || api) : p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+
+        cal("init", {origin:"https://cal.com"});
+
+        cal("inline", {
+            elementOrSelector: "#cal-booking-container",
+            calLink: "karl-rahula-rsg6gg", 
+            layout: "month_view",
+            config: {
+                theme: "light",
+            }
+        });
+
+        cal("ui", {
+            "theme": "light", /* Sunnib heleda teema */
+            "styles": {
+                "branding": {
+                    "brandColor": "#5092a0"
+                }
+            },
+            "hideEventTypeDetails": false,
+            "layout": "month_view"
+        });
+    }
+});
+
 // Käivitame funktsiooni, kui leht on laetud
 document.addEventListener('DOMContentLoaded', initInstagram);
